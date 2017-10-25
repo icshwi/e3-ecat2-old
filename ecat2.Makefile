@@ -1,20 +1,23 @@
 include ${REQUIRE_TOOLS}/driver.makefile
 
-#
-#
-# The following lines must be updated according to your ecat2
-#
-#
 
 
-# PROJECT=ecat2
-# BUILDCLASSES += Linux
+USR_CFGLAG += -I/opt/etherlab/include
 
 USR_CFLAGS += -fPIC
-# USR_LDFLAGS += -L /opt/etherlab/lib
-# USR_LDFLAGS += -lethercat
-USR_LDFLAGS += -Wl,-rpath -Wl,/opt/etherlab/lib
+USR_LDFLAGS += -L /opt/etherlab/lib
+USR_LDFLAGS += -lethercat
+USR_LDFLAGS += -Wl,-rpath=/opt/etherlab/lib
 
+DBDS += drvethercat.dbd
+
+SORUCES += devethercat.c
+SORUCES += drvethercat.c
+SORUCES += eccfg.c
+SORUCES += ecengine.c
+SORUCES += ecnode.c
+SORUCES += ectimer.c
+SORUCES += ectools.c
 
 # ibraries have been installed in:
 #    /opt/etherlab/lib
