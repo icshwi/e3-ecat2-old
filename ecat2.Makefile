@@ -1,8 +1,9 @@
 include ${REQUIRE_TOOLS}/driver.makefile
 
 
+USR_CPPFLAGS += -I/opt/etherlab/include
+USR_CFLAGS   += -I/opt/etherlab/include
 
-USR_CFGLAG += -I/opt/etherlab/include
 
 USR_CFLAGS += -fPIC
 USR_LDFLAGS += -L /opt/etherlab/lib
