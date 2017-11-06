@@ -1,5 +1,6 @@
 include ${REQUIRE_TOOLS}/driver.makefile
 
+USR_DEPENDENCIES=ethercat
 
 USR_CPPFLAGS += -I/opt/etherlab/include
 USR_CFLAGS   += -I/opt/etherlab/include
@@ -9,6 +10,8 @@ USR_CFLAGS += -fPIC
 USR_LDFLAGS += -L /opt/etherlab/lib
 USR_LDFLAGS += -lethercat
 USR_LDFLAGS += -Wl,-rpath=/opt/etherlab/lib
+
+
 
 DBDS += drvethercat.dbd
 

@@ -6,3 +6,7 @@
 	path = ecat2
 	url = https://github.com/paulscherrerinstitute/ecat2
 	ignore = all
+[submodule "m-epics-ecat2"]
+	path = m-epics-ecat2
+	url = https://github.com/icshwi/m-epics-ecat2
+	ignore = all
